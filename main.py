@@ -178,14 +178,14 @@ try:
 
             if line and line != "":
                 results.update(find_sentence(line))
-                print("{}/{} [{}] 속담 검사 중...".format(idx, lines_cnt, line))
+                print("{}/{} [{}] 속담 검사 중...".format(idx + 1, lines_cnt, line))
 
     # 결과
     print("\n\n________________________ 결과 {}________________________\n".format(
         len(results)))
 
     for idx, key in enumerate(results.keys()):
-        print("{:3}) {:30}\t\t{}".format(idx, key, results[key]))
+        print("{:3}) {:30}\t\t{}".format(idx + 1, key, results[key]))
 
 except Exception as e:
     print(e)
